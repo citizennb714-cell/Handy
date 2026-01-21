@@ -1,0 +1,16 @@
+name: Build Windows EXE
+
+on:
+  workflow_dispatch:   # ← 手動実行
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  windows:
+    uses: ./.github/workflows/build.yml
+    with:
+      platform: windows-latest
+      target: x86_64-pc-windows-msvc
+      upload-artifacts: true
+      sign-binaries: false
