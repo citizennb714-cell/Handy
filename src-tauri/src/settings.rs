@@ -342,7 +342,7 @@ fn default_update_checks_enabled() -> bool {
 }
 
 fn default_selected_language() -> String {
-    "auto".to_string()
+    "ja".to_string()
 }
 
 fn default_overlay_position() -> OverlayPosition {
